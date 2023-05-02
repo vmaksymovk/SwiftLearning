@@ -21,4 +21,6 @@ class className{
 var obj = className(num1 : 10)
 print("Answer: \(obj.someFunc())")
 
+print("I use second branch!!!!!!")
+print("I already updated second branch!!!")
 
