@@ -17,3 +17,4 @@ class className{
 
 var obj = className()
 print(obj.someFunc())
+///
