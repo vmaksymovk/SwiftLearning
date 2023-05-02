@@ -14,3 +14,6 @@ class className{
         return self.num1 + num2
     }
 }
+
+var obj = className()
+print(obj.someFunc())
