@@ -18,6 +18,7 @@ class className{
     }
 }
 
-var obj = className()
-print(obj.someFunc())
+var obj = className(num1 : 10)
+print("Answer: \(obj.someFunc())")
+
 
