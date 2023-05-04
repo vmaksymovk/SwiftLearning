@@ -7,20 +7,26 @@
 
 import Foundation
 
-class className{
-    var num1 : Int
+class area{
+    var leng : Double // properties
+    var heig : Double   // properties
     
-    func someFunc(num1 : Int = 10, num2 : Int = 20) -> Int {
-        return self.num1 + num2
+    init(lenght : Double, height : Double){
+        leng = lenght
+        heig = height
     }
-    init(num1: Int) {
-        self.num1 = num1
+    
+    convenience init() {
+        self.init(lenght: 20.3, height: 20.3)
     }
+    
+    func calculateArea() -> Double {
+        return leng * heig
+    }
+    
+    
 }
 
-var obj = className(num1 : 10)
-print("Answer: \(obj.someFunc())")
-
-print("I use second branch!!!!!!")
-print("I already updated second branch!!!")
+var wall1 = area()
+print(wall1.calculateArea())
 
