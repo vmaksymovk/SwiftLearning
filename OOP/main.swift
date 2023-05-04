@@ -7,26 +7,29 @@
 
 import Foundation
 
-class area{
-    var leng : Double // properties
-    var heig : Double   // properties
-    
-    init(lenght : Double, height : Double){
-        leng = lenght
-        heig = height
+class File {
+
+  var folder: String
+
+  // failable initializer
+  init?(folder: String) {
+
+    // check if empty
+    if folder.isEmpty {
+      print("Folder Not Found") // 1st output
+      return nil
     }
-    
-    convenience init() {
-        self.init(lenght: 20.3, height: 20.3)
-    }
-    
-    func calculateArea() -> Double {
-        return leng * heig
-    }
-    
-    
+    self.folder = folder
+  }
 }
 
-var wall1 = area()
-print(wall1.calculateArea())
+// create folder1 object
+var file  = File(folder: "")
+if (file != nil) {
+  print("File Found Successfully")
+}
+else {
+  print("Error Finding File") // 2nd output
+}
 
+print(1234)
