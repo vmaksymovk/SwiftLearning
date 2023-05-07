@@ -7,29 +7,31 @@
 
 import Foundation
 
-class File {
 
-  var folder: String
+// deinit
 
-  // failable initializer
-  init?(folder: String) {
 
-    // check if empty
-    if folder.isEmpty {
-      print("Folder Not Found") // 1st output
-      return nil
+class test{
+    var name : String
+    
+    init(name: String) {
+        print("We called initialization")
+        self.name = name
     }
-    self.folder = folder
-  }
+    
+    convenience init(){
+        self.init(name: "Vladyslav")
+        print("We called convinience init and usually init \(self.name)")
+    }
+    
+    deinit {
+        print("When instance == nil, we called deinitialization ")
+    }
+    
+    
 }
 
-// create folder1 object
-var file  = File(folder: "")
-if (file != nil) {
-  print("File Found Successfully")
-}
-else {
-  print("Error Finding File") // 2nd output
-}
 
-print(1234)
+var obj : test? = test()
+
+obj = nil
